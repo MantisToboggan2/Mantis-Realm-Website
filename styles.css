@@ -1,0 +1,1045 @@
+/* Global (Styles across all pages) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Times New Roman', serif;
+  font-weight: 800;
+  background: radial-gradient(circle, rgba(0,209,255,1) 0%, rgba(9,9,121,1) 81%, rgba(2,0,36,1) 100%, rgba(21,0,51,1) 100%);
+}
+footer {
+  background-color: rgb(0,0,0);
+  color: rgb(255,255,255);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 11000;
+}
+footer.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.footer-contact {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.footer-contact:hover {
+  color: rgb(153,183,254);
+}
+.footer-copyright {
+  margin-right: 20px;
+  font-size: 14px;
+}
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px 20px 100px 20px;
+}
+.header-logo {
+  position: absolute;
+  left: 20px;
+  width: 90px;
+  height: 85px;
+}
+.header-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+/* Hamburger */
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+}
+.hamburger.hidden {
+    visibility: hidden;
+}
+/* Mobile Nav */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    padding-top: 60px;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+}
+.mobile-nav {
+    z-index: 20000;
+}
+.mobile-nav.active {
+    right: 0;
+}
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.mobile-nav li {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobile-nav a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Federant", serif;
+    border: 2px solid rgb(0,209,255);
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgb(153,183,254);
+    display: inline-block;
+    color: rgb(0, 0, 0);
+}
+/* Body Header */
+.mainbodyheader {
+  background-color: rgb(153,183,254);
+  border: 1px solid rgb(0,0,0);
+  border-radius: 10px;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  margin: 100px auto 0 auto;
+  padding: 20px 10px;
+  text-align: center;
+}
+.mainbodyheaderexp {
+  background-color: rgb(153,183,254);
+  border: 1px solid rgb(0,0,0);
+  border-radius: 10px;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  margin: 10px auto 0 auto;
+  padding: 20px 10px;
+  text-align: center;
+  width: 50%;
+}
+.mainbodyheader h2 {
+  color: rgb(0,0,0);
+  font-weight: 700;
+}
+.mainbodyheader2 {
+  background-color: rgb(153,183,254);
+  border: 1px solid rgb(0,0,0);
+  border-radius: 10px;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: rgb(0,0,0);
+  font-weight: 700;
+}
+/* Calculators Page */
+#calculators footer {
+  background-color: rgb(0, 0, 0);
+  visibility: visible;
+  opacity: 1;
+}
+.calculators-back-button {
+  color: #fff;
+  font-size: 20px;
+  background-color: inherit;
+  border-radius: 6px;
+  text-decoration: none;
+  position: relative;
+  padding-left: 30px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+.calculators-back-button::before {
+  content: "🡠";
+  position: absolute;
+  left: 10px;
+  font-size: 18px;
+  opacity: 0;
+  transition: left 0.3s ease, opacity 0.3s ease;
+}
+.calculators-back-button:hover::before {
+  left: 0;
+  opacity: 1;
+}
+.grid-section {
+  padding: 16px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.grid-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0,217,255);
+  border: 6px solid rgb(54,104,255);
+  border-radius: 50px;
+  padding: 32px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0,0,0);
+  font-size: 19.2px;
+  transition: all 0.3s ease;
+}
+.grid-box:hover {
+  background: rgb(54,104,255);
+  border-color: rgb(0,217,255);
+  transform: scale(1.05);
+}
+#calculators .mainbodyheader {
+  width: 25%;
+}
+#calculators .side-menu a.active6 {
+  background-color: rgb(54,104,255);
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+/* Index Page */
+.updates-header {
+  background-color: rgb(153,183,254);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 100px;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  font-size: 18px;
+  color: rgb(0,0,0);
+  text-align: center;
+  border: 3px solid yellow;
+  font-family: 'Courier New', monospace;
+  width: 17%;
+}
+.update-list li {
+  background-color: rgb(153,183,254);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  font-size: 18px;
+  color: rgb(0,0,0);
+  text-align: center;
+  border: 3px solid yellow;
+  font-family: 'Courier New', monospace;
+  width: 95%;
+  transition: transform 0.6s ease;
+  list-style-type: none;
+}
+.update-list .bottom {
+  margin-bottom: 75px;
+}
+.update-list li:hover {
+  transform: translateY(-10px);
+}
+#index .mainbodyheader {
+  width: 25%;
+}
+#index .side-menu a.active3 {
+  background-color: rgb(54,104,255);
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+/* Contact Page */
+#contact footer {
+  visibility: visible;
+  opacity: 1;
+}
+.contact-form form {
+  max-width: 600px;
+  margin: 50px auto 75px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.contact-form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-size: 18px;
+}
+.contact-form input[type="email"], .contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(27,27,27,0.8);
+  color: rgb(255,255,255);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.contact-form textarea {
+  height: 150px;
+}
+.contact-form button[type="submit"] {
+  background: rgb(10,116,218);
+  color: rgb(255,255,255);
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button[type="submit"]:hover {
+  background: rgb(8,107,181);
+}
+#contact .mainbodyheader {
+  padding: 15px 5px;
+  width: 50%;
+}
+#contact .side-menu a.active1 {
+  background-color: rgb(54,104,255);
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+/* Discord Page */
+#discord .mainbodyheader {
+  width: 15%;
+}
+#discord .side-menu a.active2 {
+  background-color: rgb(54,104,255);
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+/* Display Bandwidth Page */
+#display-bandwidth .mainbodyheader, #percent-change .mainbodyheader, #percent-difference .mainbodyheader {
+  width: 25%;
+  margin-bottom: 5px;
+}
+#display-bandwidth .mainbodyheader2, #percent-change .mainbodyheader2, #percent-difference .mainbodyheader2 {
+  width: 25%;
+  margin-bottom: 25px;
+}
+.standards-info .box-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin: 0 auto 25px;
+  width: 60%;
+}
+.standards-info .mainbodybox1, .standards-info .mainbodybox2 {
+  background-color: rgb(153,183,254);
+  border: 1px solid rgb(0,0,0);
+  width: 22%;
+  border-radius: 10px;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  padding: 10px;
+  text-align: center;
+}
+.standards-info .mainbodybox1 h4, .standards-info .mainbodybox2 h4 {
+  color: rgb(0,0,0);
+  font-weight: 700;
+  font-size: 16px;
+}
+.standards-info .mainbodybox1 p, .standards-info .mainbodybox2 p {
+  color: rgb(0,0,0);
+  font-size: 14px;
+}
+.calculator-section .calculator {
+  background: rgb(0,217,255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0,0,0);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 75px;
+}
+.calculator-section label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 700;
+  color: rgb(0,0,0);
+}
+.calculator-section input, .calculator-section select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 3px solid rgb(54,104,255);
+  border-radius: 10px;
+  font-size: 16px;
+}
+.calculator-section button {
+  background-color: rgb(54,104,255);
+  color: rgb(255,255,255);
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 650;
+}
+.calculator-section button:hover {
+  background-color: rgb(0,56,168);
+}
+.calculator-section #result, .calculator-section .pchange-result, .calculator-section .error-result, .calculator-section .pdif-result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: rgb(0,0,0);
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+}
+.calculator-section .input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.calculator-section .input-group {
+  flex: 1;
+}
+.calculator-section .hdr-container {
+  margin: 10px auto;
+  text-align: center;
+}
+.calculator-section .hdr-container select {
+  width: 50%;
+}
+/* Minecraft Page */
+#minecraft .mainbodyheader {
+  width: 30%;
+}
+#minecraft .side-menu a.active4 {
+  background-color: rgb(54,104,255);
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+/* Percent Change and Percent Difference Calculator Page */
+#percent-change footer, #percent-difference footer {
+  background-color: rgb(0, 0, 0);
+  visibility: visible;
+  opacity: 1;
+}
+.percent-calculator, .pdif-calculator {
+  background: rgb(0,217,255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 75px auto;
+  border: 3px solid rgb(54,104,255);
+  text-align: center;
+}
+.percent-calculator .input-group, .pdif-calculator .input-group {
+  margin-bottom: 15px;
+}
+.percent-calculator .input-group label, .pdif-calculator .input-group label {
+  display: block;
+  color: rgb(0,0,0);
+  font-weight: bold;
+}
+.percent-calculator .input-group input, .pdif-calculator .input-group input {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid rgb(54,104,255);
+  border-radius: 5px;
+}
+.pdif-calculator {
+  max-width: 300px;
+}
+/* Scientific Calculator Page */
+#standard-calculator footer {
+  background-color: rgb(0, 0, 0);
+  visibility: visible;
+  opacity: 1;
+}
+.standard-calculator-section {
+  display: flex;
+  justify-content: center;
+}
+.standard-calc-calculator {
+  background: rgb(0,217,255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 75px;
+  border: 3px solid rgb(54,104,255);
+  text-align: center;
+}
+#standard-calc-display {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: right;
+  border: 3px solid rgb(54,104,255);
+  border-radius: 10px;
+}
+.standard-calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+.standard-calculator-buttons button {
+  font-weight: 650;
+  padding: 15px;
+  background-color: rgb(54,104,255);
+  color: rgb(255,255,255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+.standard-calculator-buttons button:hover {
+  background-color: rgb(0,56,168);
+}
+#standard-calculator .mainbodyheader {
+  width: 25%;
+  margin-bottom: 50px;
+}
+/* YouTube Page */
+.mytc {
+  color: rgb(40,40,40);
+}
+#youtube .mainbodyheader {
+  width: 25%;
+}
+#youtube .side-menu a.active5 {
+  background-color: rgb(54,104,255);
+  color: rgb(255,255,255);
+  font-weight: bold;
+}
+/* dectalk page */
+#dectalkbutton .mainbodyheader {
+  background-color: rgb(153,183,254);
+  padding: 20px;
+  margin: 5px auto 0 auto;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  font-size: 20px;
+  color: rgb(0,0,0);
+  text-align: center;
+  width: 50%;
+}
+#dectalkbutton .mainbodyheader {
+  background-color: rgb(153,183,254);
+  padding: 20px;
+  margin: 5px auto 0 auto;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  font-size: 17px;
+  color: rgb(0,0,0);
+  text-align: center;
+  width: 75%;
+}
+#dectalkUI {
+  text-align: center;
+  padding: 32px 32px 32px 32px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+}
+.dectalkmain {
+  margin-top: 60px;
+}
+#dectalk textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid rgb(166, 192, 254);
+  border-radius: 6px;
+  resize: vertical;
+  margin-bottom: 16px;
+  background-color: rgb(153,183,254);
+  color: rgb(0, 0, 0);
+}
+#dectalk ::placeholder {
+  color: rgb(0, 43, 48);
+}
+#songslink {
+  text-decoration: solid;
+}
+#songslink:hover {
+  color: rgb(135, 89, 184);
+}
+ #loaddectalk {
+  padding: 10px 24px;
+  font-size: 16px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgb(0, 102, 204);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+#dectalkbutton button:hover {
+  background-color: rgb(1, 92, 183);
+  transition: 0.2s;
+}
+#audioPlayer {
+  margin-top: 10px;
+  width: 100%;
+}
+#phon {
+  margin-top: 100px;
+  font-weight: bold;
+  font-size: 19px;
+  text-align: center;
+}
+.phoneme-img {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  border: 2px solid rgb(153,183,254);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 85px;
+  height: 85px;
+}
+#loaddectalk {
+  display: block;
+  margin: 25px auto 0 auto;
+}
+#userguide {
+  text-decoration: solid;
+}
+#userguide:hover {
+  color: rgb(135, 89, 184);
+}
+#digikey {
+  text-decoration: solid;
+}
+#digikey:hover {
+  color: rgb(135, 89, 184);
+}
+#dectalk button {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgb(230, 0, 255);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+#dectalk button:hover {
+  background-color: rgb(186, 0, 207);
+  transition: 0.2s;
+}
+/* DECtalk songs */
+#dectalksongs .mainbodyheader {
+  background-color: rgb(153,183,254);
+  padding: 20px;
+  margin: 20px auto 5px auto;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  font-size: 20px;
+  color: rgb(0,0,0);
+  text-align: center;
+  width: 50%;
+}
+#dectalksongs .mainbodyheader2{
+    background-color: rgb(153,183,254);
+    padding: 20px;
+    margin: 0 auto 10px auto;
+    box-shadow: 7px 7px 17px rgb(0,0,0);
+    font-size: 20px;
+    color: rgb(0,0,0);
+    text-align: center;
+    width: 50%;
+}
+.song-updates-header {
+  background-color: rgb(153,183,254);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 100px;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  font-size: 18px;
+  color: rgb(0,0,0);
+  text-align: center;
+  border: 3px solid rgb(0, 0, 0);
+  font-family: 'Courier New', monospace;
+  width: 17%;
+}
+.song-list li {
+  background-color: rgb(153,183,254);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 7px 7px 17px rgb(0,0,0);
+  font-size: 18px;
+  color: rgb(0,0,0);
+  text-align: center;
+  border: 3px solid rgb(0, 0, 0);
+  font-family: 'Courier New', monospace;
+  width: 95%;
+  transition: transform 0.6s ease;
+  list-style-type: none;
+}
+/* Boxes (Shared by Discord, Minecraft, and YouTube page) */
+.discordpageboxgroup1, .minecraftpageboxgroup1, .youtubepageboxgroup1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  text-align: center;
+  width: 100%;
+  margin: 30px 0;
+  padding: 0 10px;
+}
+.discordpageboxleft, .discordpageboxright, .minecraftpageboxleft, .minecraftpageboxright, .youtubepageboxleft, .youtubepageboxmiddle, .youtubepageboxright {
+  background-color: rgb(153,183,254);
+  border: 3px solid rgb(0,0,0);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px 10px 50px;
+  box-shadow: 10px 10px 15px rgb(0,0,0);
+  flex: 0 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 500px;
+  transition: transform 0.6s ease, background-color 0.6s ease;
+}
+.discordpageboxleft:hover, .discordpageboxright:hover, .minecraftpageboxleft:hover, .minecraftpageboxright:hover, .youtubepageboxleft:hover, .youtubepageboxmiddle:hover, .youtubepageboxright:hover {
+  transform: translateY(-10px);
+  background-color: rgb(175,198,253);
+}
+.discordpageboxtitletextleft, .discordpageboxtitletextright, .minecraftpageboxtitletextleft, .minecraftpageboxtitletextright, .youtubepageboxtitletext {
+  font-weight: 900;
+  color: rgb(255,255,255);
+  border: 1px solid rgb(255,255,255);
+  border-radius: 100px;
+  background-color: rgb(40,40,40);
+  padding: 5px 15px;
+}
+.botlogo, .serverlogo, .modpackimage, .serverimage, .bmggea, .ycl, .mcrt {
+  border-radius: 250px;
+  margin: 25px 0 0;
+  width: 250px;
+  height: 250px;
+}
+.botlink, .serverlink, .modpacklink, .videolink {
+  text-decoration: none;
+  color: rgb(255,255,255);
+  background-color: rgb(82,139,219);
+  border: 1px solid rgb(80,79,79);
+  border-radius: 4px;
+  padding: 10px 50px;
+  margin: 25px 0 0;
+  font-size: 20px;
+}
+.botlink:hover, .serverlink:hover, .modpacklink:hover, .videolink:hover {
+  background-color: rgb(110,170,255);
+}
+.discordpageboxgroup2, .minecraftpageboxgroup2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  text-align: center;
+  width: 100%;
+  margin: 30px 0 75px 0;
+  padding: 0 10px;
+}
+.discordpageboxleftdesc, .discordpageboxrightdesc, .minecraftpageboxleftdesc, .minecraftpageboxrightdesc {
+  background-color: rgb(153,183,254);
+  border: 3px solid rgb(0,0,0);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 10px 10px 15px rgb(0,0,0);
+  flex: 0 1 30%;
+  transition: transform 0.6s ease, background-color 0.6s ease;
+}
+.discordpageboxleftdesc:hover, .discordpageboxrightdesc:hover, .minecraftpageboxleftdesc:hover, .minecraftpageboxrightdesc:hover {
+  transform: translateY(-10px);
+  background-color: rgb(175,198,253);
+}
+.discordpagedescleft, .discordpagedescright, .minecraftpagedescleft, .minecraftpagedescright {
+  color: yellow;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+/* Responsive Design (Across all pages) */
+@media (max-width: 1350px) {
+  header {
+padding: 15px 20px 90px 20px;
+    height: auto;
+  }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .site-title {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .header-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90px;
+    height: 85px;
+  }
+  .header-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hamburger {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  header h1 {
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  .dropdown-btn {
+    opacity: 1;
+  }
+  #percent-change footer, #percent-difference footer{
+    visibility: hidden;
+    opacity: 0;
+  }
+  #percent-change footer.visible, #percent-difference footer.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  .standard-calculator-section {
+    margin-bottom: 100px;
+  }
+  .calculators-back-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  .mainbodyheader {
+    margin: 0 auto 70px;
+    width: 70%;
+    max-width: 600px;
+  }
+    main, .mainbodyheader, .grid-section, .calculator-section, .contact-form, .updates-header {
+    margin-top: 60px;
+  }
+  .mainbodyheader2 {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+  }
+  #index .mainbodyheader, #youtube .mainbodyheader {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #index .updates-header {
+    width: 60%;
+    border-radius: 25px;
+  }
+  #minecraft .mainbodyheader, #calculators .mainbodyheader, #standard-calculator .mainbodyheader, #display-bandwidth .mainbodyheader, #percent-difference .mainbodyheader, #percent-change .mainbodyheader {
+    width: 55%;
+    margin: 0 auto;
+  }
+  #discord .mainbodyheader {
+    width: 60%;
+    margin: 0 auto;
+  }
+  #percent-change .mainbodyheader2, #percent-difference .mainbodyheader2 {
+    width: 80%;
+    margin: 0 auto 15px auto;
+  }
+  #percent-change .mainbodyheader, #percent-difference .mainbodyheader {
+    margin: 0 auto 15px auto;
+  }
+  #display-bandwidth .mainbodyheader {
+    margin-bottom: 15px;
+  }
+  .updates-header {
+    width: 30%;
+    margin: 20px auto;
+    max-width: 300px;
+  }
+  .update-list li {
+    width: 80%;
+    margin: 25px auto;
+    max-width: 600px;
+  }
+  .discordpageboxgroup1, .minecraftpageboxgroup1, .youtubepageboxgroup1 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 0;
+  }
+  .discordpageboxleft, .discordpageboxright, .minecraftpageboxleft, .minecraftpageboxright, .youtubepageboxleft, .youtubepageboxmiddle, .youtubepageboxright {
+    flex: 0 1 100%;
+    min-height: 400px;
+    margin: 0 0 50px;
+    width: 100%;
+    max-width: 500px;
+  }
+  .discordpageboxgroup2, .minecraftpageboxgroup2 {
+    display: none;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin: 0 auto 100px;
+    width: 100%;
+    max-width: 600px;
+  }
+  .grid-box {
+    padding: 40px 0;
+    font-size: 17.5px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  #calculators footer {
+    visibility: hidden;
+    opacity: 0;
+  }
+  #calculators footer.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  #calculators .mainbodyheader {
+    width: 80%;
+  }
+  #standard-calculator footer {
+    visibility: hidden;
+    opacity: 0;
+  }
+  #standard-calculator footer.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  .standard-calculator-section {
+    display: flex;
+    justify-content: center;
+  }
+  .standard-calc-calculator {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+  }
+  #standard-calculator .mainbodyheader {
+    width: 75%;
+    margin-bottom: 50px;
+  }
+  .standard-calculator-buttons button {
+    padding: 15px 0;
+    font-size: 22px;
+    min-height: 60px;
+  }
+  .percent-calculator, .pdif-calculator {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 75px;
+  }
+  #contact footer {
+    visibility: hidden;
+    opacity: 0;
+  }
+  #contact footer.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  #contact .mainbodyheader {
+    width: 80%;
+  }
+  .contact-form form {
+    margin: 50px auto;
+    width: 100%;
+    max-width: 500px;
+  }
+  #display-bandwidth .standards-info .mainbodyheader2 {
+    width: 75%;
+  }
+  .standards-info .box-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 25px;
+  }
+  .standards-info .mainbodybox1, .standards-info .mainbodybox2 {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto; 
+  }
+  .calculator-section .calculator {
+    margin: 0 auto 75px;
+    width: 100%;
+    max-width: 400px;
+  }
+  #loaddectalk {
+    margin: 15px auto 75px auto;
+  }
+  .song-list li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .song-list .bottomsong {
+    margin-bottom: 75px;
+  }
+  #dectalksongs .mainbodyheader,
+  #dectalksongs .mainbodyheader2,
+  .song-updates-header,
+  .song-list li {
+    width: 90%;
+    font-size: 16px;
+    padding: 15px;
+    margin: 10px auto;
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .footer-contact, .footer-copyright {
+    margin: 0 10px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .dropdown-content {
+    transform: none;
+    margin: 0 0 0 -187px;
+    text-align: center;
+  }
+}

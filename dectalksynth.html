@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mantisrealm | Synthpage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="dectalk">
+  <div id="dectalkUI" class="hidden">
+    <textarea id="textInput" name="Text1" cols="40" rows="5" placeholder="Enter text to synthesize"></textarea>
+    <button class="synthbutton" onclick="synth_tts()">Synthesize</button>
+    <audio id="audioPlayer" controls></audio>
+  </div>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("dectalkUI").classList.remove("hidden");
+    const script = document.createElement("script");
+    script.src = "epsonapi.js";
+    script.onload = initDECtalk;
+    document.body.appendChild(script);
+  });
+
+  function initDECtalk() {
+    const textInput = document.getElementById('textInput');
+    const audioPlayer = document.getElementById('audioPlayer');
+
+    window.synth_tts = async function () {
+      // Automatically add phoneme on
+      const textToSynthesize = "[:phoneme on]" + textInput.value;
+
+      Module.ccall('TTSreset', 'void', [], []);
+      const ptr = Module.ccall('TTSstart', 'number', ['string'], [textToSynthesize]);
+      const arraySize = Module.ccall('get_total_size', 'number', [], []);
+      const shortArray = new Int16Array(Module.HEAPU8.buffer, ptr, arraySize);
+      const arrayCopy = new Int16Array(shortArray);
+      audioPlayer.src = URL.createObjectURL(new Blob([arrayCopy], { type: 'audio/wav' }));
+      audioPlayer.play();
+    };
+
+    function callback(ptr, length, last_phoneme, frame_index) {
+      // phoneme timing logic removed
+    }
+
+    Module.onRuntimeInitialized = function () {
+      console.log("Emscripten initialized.");
+      const pointer = Module.addFunction(callback, "viiii");
+      Module.ccall('TTSinit', 'void', ['pointer'], [pointer]);
+    };
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantis HQ | Display Bandwidth</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.webp">
+</head>
+<body id="display-bandwidth">
+  <header>
+    <a href="index.html" class="site-title">
+      <img src="logo.webp" alt="Website Logo" class="header-logo">
+    </a>
+    <nav class="header-nav">
+      <a href="calculatorstartpage.html" class="calculators-back-button">Back</a>
+    </nav>
+  </header>
+  <main>
+    <section class="welcome">
+      <h2 class="mainbodyheader">Display Bandwidth Calculator</h2>
+    </section>
+    <section class="standards-info">
+      <h3 class="mainbodyheader2">Below are cable standards to reference for bandwidth limitations</h3>
+      <div class="box-container">
+        <article class="mainbodybox1">
+          <h4>HDMI</h4>
+          <p>1.4: 10.2 Gbps<br>2.0: 18 Gbps<br>2.1: 48 Gbps</p>
+        </article>
+        <article class="mainbodybox2">
+          <h4>DisplayPort</h4>
+          <p>1.4: 32.4 Gbps<br>2.1: 80 Gbps</p>
+        </article>
+      </div>
+    </section>
+    <section class="calculator-section">
+      <div class="calculator">
+        <div class="input-row">
+          <div class="input-group">
+            <label for="width">Resolution Width:</label>
+            <input type="number" id="width" placeholder="e.g., 3840" required>
+          </div>
+          <div class="input-group">
+            <label for="height">Resolution Height:</label>
+            <input type="number" id="height" placeholder="e.g., 2160" required>
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label for="refreshRate">Refresh Rate:</label>
+            <input type="number" id="refreshRate" placeholder="e.g., 144" required>
+          </div>
+          <div class="input-group">
+            <label for="colorDepth">Bit Depth:</label>
+            <input type="number" id="colorDepth" placeholder="e.g., 10" required>
+          </div>
+        </div>
+        <div class="hdr-container">
+          <label for="hdr">HDR:</label>
+          <select id="hdr">
+            <option value="no">Off</option>
+            <option value="yes">On</option>
+          </select>
+        </div>
+        <button onclick="calculateBandwidth()">Calculate</button>
+        <div id="result"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="contact.html" class="footer-contact">Contact Us</a>
+    <p class="footer-copyright">© 2025 Mantis HQ. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

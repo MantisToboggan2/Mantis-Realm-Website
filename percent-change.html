@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantis HQ | Percent Change</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.webp">
+</head>
+<body id="percent-change">
+  <header>
+    <a href="index.html" class="site-title">
+      <img src="logo.webp" alt="Website Logo" class="header-logo">
+    </a>
+    <nav class="header-nav">
+      <a href="calculatorstartpage.html" class="calculators-back-button">Back</a>
+    </nav>
+  </header>
+  <main>
+    <section class="welcome">
+      <h2 class="mainbodyheader">Percent Change Calculator</h2>
+    </section>
+    <section class="description">
+      <p class="mainbodyheader2">The percent change calculator is a tool that quantifies the change between two values and expresses it as a percentage, indicating whether it's an increase or decrease.</p>
+    </section>
+    <section class="calculator-section">
+      <div class="percent-calculator">
+        <div class="input-group">
+          <label for="initialValue">Initial Value:</label>
+          <input type="number" id="initialValue" step="0.01" required>
+        </div>
+        <div class="input-group">
+          <label for="finalValue">Final Value:</label>
+          <input type="number" id="finalValue" step="0.01" required>
+        </div>
+        <button onclick="calculatePercentChange()">Calculate</button>
+        <div id="error-result" class="error-result"></div>
+        <div id="pchange-result" class="pchange-result">Result: --%</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="contact.html" class="footer-contact">Contact Us</a>
+    <p class="footer-copyright">© 2025 Mantis HQ. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
