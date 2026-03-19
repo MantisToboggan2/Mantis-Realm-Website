@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantis HQ | Web design</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.webp">
+</head>
+<body id="websites">
+<header id="main-header"> 
+    <div class="header-container">
+        <a href="index.html">
+            <img src="/images/logo.webp" alt="Mantis HQ Logo" class="header-logo">
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+        <a href="websites.html" class="websites-btn">
+            <span class="websites-text">Web Design</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="container home-page">
+    <section class="mainbox">
+        <div class="mainbox-content">
+            <h1 class="mainbox-title" data-text="WEB DEVELOPMENT">WEB DEVELOPMENT</h1>
+            <div class="website-status-terminal" style="margin-bottom: 40px;">
+                <h2 style="font-family: 'Orbitron', sans-serif; color: #fff; margin-bottom: 15px;">Mantis HQ Web Design</h2>
+                <p style="color: rgba(255,255,255,0.8); font-size: 14px; max-width: 800px;">
+                    I specialize in building high-performance, full-stack web environments with a focus on speed, and security. 
+                    <br><strong>Currently accepting new projects for my upcoming web development business.</strong>
+                </p>
+                <section class="website-status-terminal" style="margin-top: 60px;">
+    <div class="terminal-bar">
+        <span class="terminal-title">Hire me to build you a website!</span>
+    </div>
+    <div class="group-label">Your Information</div>
+    <form action="https://formspree.io/f/mqazrgpj" method="POST" class="contact-form">
+        <div class="input-group">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Who am I speaking with?" required>
+        </div>
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="client@example.com" required>
+        </div>
+        <div class="input-group">
+            <label>Project Type</label>
+            <select name="subject" style="width: 100%; padding: 15px; background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(0, 209, 255, 0.2); color: white; border-radius: 4px; font-family: 'Segoe UI', sans-serif;">
+                <option value="New Website">New Website Build</option>
+                <option value="Site Migration">Server Migration / Cloudflare Setup</option>
+                <option value="Maintenance">Bug Fix / Maintenance</option>
+                <option value="Other">Other Inquiry</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label>Message</label>
+            <textarea name="message" rows="5" placeholder="Tell me about your project vision..." required></textarea>
+        </div>
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit" class="cyber-btn btn-blue" style="width: 100%; justify-content: center;">
+            Send Details
+        </button>
+    </form>
+</section>
+            </div>
+            <div class="group-label">PROJECT SHOWCASE</div>
+            <div class="youtube-grid">
+                <div class="video-card">
+                    <div class="thumb-container">
+                        <img src="/images/Wnoback.png" alt="Winterfell Networks Project">
+                    </div>
+                    <span class="rank">GMOD COMMUNITY PORTAL / FULL-STACK</span>
+                    <h3 class="name" style="font-size: 18px;">Winterfell Networks</h3>
+                    <p class="small-note">A high-performance gaming community site featuring dynamic server status integration and Cloudflare optimization. This was the first website I was PAID to make!</p>
+                    <a href="https://winterfellnetworks.com" target="_blank" class="cyber-btn btn-blue">VIEW SITE</a>
+                </div>
+                <div class="video-card">
+                    <div class="thumb-container">
+                        <img src="/images/logo.webp" alt="Mantis HQ Project">
+                    </div>
+                    <span class="rank">PORTFOLIO / UI-UX</span>
+                    <h3 class="name" style="font-size: 18px;">Mantis HQ</h3>
+                    <p class="small-note">My personal website for showcasing all the things I know about web development and cool features.</p>
+                    <a href="index.html" class="cyber-btn btn-blue">You're here!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <a href="https://cloudflare.com/" class="footer-contact" target="_blank">
+        <img src="/images/cf.webp" alt="Cloudflare logo" class="footer-logo">
+        <span>Cloudflare</span>
+    </a>
+    <p class="footer-copyright">© 2026 Mantis HQ. All rights reserved.</p>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

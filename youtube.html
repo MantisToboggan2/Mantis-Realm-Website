@@ -8,55 +8,81 @@
   <link rel="icon" href="logo.webp">
 </head>
 <body id="youtube">
-<header>
-  <div class="header-container">
-    <a href="index.html">
-      <img src="logo.webp" alt="Website Logo" class="header-logo">
-    </a>
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+<header id="main-header"> 
+    <div class="header-container">
+        <a href="index.html">
+            <img src="/images/logo.webp" alt="Mantis HQ Logo" class="header-logo">
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+        <a href="websites.html" class="websites-btn">
+            <span class="websites-text">Web Design</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="youtube.html">YouTube</a></li>
-          <li><a href="minecraft.html">Minecraft</a></li>
-          <li><a href="discord.html">Discord</a></li>
-          <li><a href="calculatorstartpage.html">Calcs/Converts</a></li>
-          <li><a href="dectalk.html">DECTalk</a></li>
-          <li><a href="dectalksongs.html">DECTalk Songs</a></li>
-      </ul>
-    </nav>
-  </div>
 </header>
-  <main>
-    <section class="welcome">
-      <h2 class="mainbodyheader"><span class="mytc">My YouTube Channel</span></h2>
+<main class="container home-page youtube-page"> <section class="mainbox">
+        <div class="mainbox-content">
+            <h1 class="mainbox-title" data-text="YouTube">YouTube</h1>
+            <div class="website-status-terminal wide-terminal">
+                <div class="terminal-bar">
+                    <span class="terminal-title">My Youtube Channel | @Mantis_Real</span>
+                </div>
+                <div class="youtube-grid">
+                    <article class="video-card">
+                        <h3 class="name">Most Popular Video</h3>
+                        <p class="view-count">550,000+ views</p>
+                        <div class="thumb-container">
+                            <img src="/images/lksi.webp" alt="Popular video thumbnail">
+                        </div>
+                        <a class="cyber-btn btn-blue" href="https://www.youtube.com/watch?v=Pd0-vcuyJYQ" target="_blank">Watch here!</a>
+                    </article>
+                    <article class="video-card highlight">
+                        <h3 class="name">My Channel</h3>
+                        <p class="view-count">3,050+ Subscribers</p>
+                        <div class="thumb-container">
+                            <img src="/images/ycl.jpg" alt="YouTube channel image">
+                        </div>
+                        <a class="cyber-btn btn-blue" href="https://www.youtube.com/channel/UC8D6ieSfc-dmvimhgt7flYw" target="_blank">Take a look!</a>
+                    </article>
+                    <article class="video-card">
+                        <h3 class="name">Recommended Video</h3>
+                        <p class="view-count">500+ views</p>
+                        <div class="thumb-container">
+                            <img src="/images/bf6i.webp" alt="Recommended video thumbnail">
+                        </div>
+                        <a class="cyber-btn btn-blue" href="https://www.youtube.com/watch?v=iohsj26dH8Y" target="_blank">Watch here!</a>
+                    </article>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="youtubepageboxgroup1">
-      <article class="youtubepageboxleft">
-        <h3 class="youtubepageboxtitletext">Popular video</h3>
-        <img class="bmggea" src="lksi.webp" alt="Popular video thumbnail">
-        <a class="videolink" href="https://www.youtube.com/watch?v=Pd0-vcuyJYQ" target="_blank">Watch here!</a>
-      </article>
-      <article class="youtubepageboxmiddle">
-        <h3 class="youtubepageboxtitletext">My Channel</h3>
-        <img class="ycl" src="ycl.jpg" alt="YouTube channel image">
-        <a class="videolink" href="https://www.youtube.com/channel/UC8D6ieSfc-dmvimhgt7flYw" target="_blank">Take a look!</a>
-      </article>
-      <article class="youtubepageboxright">
-        <h3 class="youtubepageboxtitletext">Recommended video</h3>
-        <img class="mcrt" src="bf6i.webp" alt="Recommended video thumbnail">
-        <a class="videolink" href="https://www.youtube.com/watch?v=iohsj26dH8Y" target="_blank">Watch here!</a>
-      </article>
-    </section>
-  </main>
-  <footer>
-    <a href="contact.html" class="footer-contact">Contact Us</a>
-    <p class="footer-copyright">© 2025 Mantis HQ. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+</main>
+<footer>
+    <a href="https://cloudflare.com/" class="footer-contact" target="_blank">
+        <img src="/images/cf.webp" alt="Cloudflare logo" class="footer-logo">
+        <span>Cloudflare</span>
+    </a>
+    <p class="footer-copyright">© 2026 Mantis HQ. All rights reserved.</p>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>

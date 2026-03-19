@@ -5,43 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mantis HQ | Percent Difference</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="logo.webp">
+  <link rel="icon" href="/images/logo.webp">
 </head>
 <body id="percent-difference">
-  <header>
-    <a href="index.html" class="site-title">
-      <img src="logo.webp" alt="Website Logo" class="header-logo">
+<header id="main-header"> 
+    <div class="header-container">
+        <a href="index.html">
+            <img src="/images/logo.webp" alt="Mantis HQ Logo" class="header-logo">
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+        <a href="websites.html" class="websites-btn">
+            <span class="websites-text">Web Design</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="container home-page">
+    <section class="mainbox">
+        <div class="mainbox-content">
+            <h1 class="mainbox-title" data-text="Percent Difference">Percent Difference</h1>
+            <p class="mainbox-paragraph">Compares two values relative to their average. Ideal for identifying the variance between two independent data points.</p>
+            <div class="website-status-terminal">
+                <div class="contact-form">
+                    <div class="input-group">
+                        <label for="value1">V1</label>
+                        <input type="number" id="value1" step="any" placeholder="Input first value...">
+                    </div>
+                    <div class="input-group">
+                        <label for="value2">V2</label>
+                        <input type="number" id="value2" step="any" placeholder="Input second value...">
+                    </div>
+                    <div class="mainbox-actions">
+                        <button onclick="calculatePercentDifference()" class="cyber-btn btn-blue">CALCULATE</button>
+                    </div>
+                    <div id="result" style="margin-top: 30px; font-family: 'Orbitron', sans-serif; text-align: center;">
+                        <div style="border: 1px solid rgba(0, 209, 255, 0.2); padding: 20px; background: rgba(0, 0, 0, 0.4); border-radius: 4px;">
+                            <h2 id="diff-display" style="font-size: 32px; color: rgb(0, 209, 255); margin-top: 10px; text-shadow: 0 0 10px rgba(0, 209, 255, 0.5);">--%</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <a href="https://cloudflare.com/" class="footer-contact" target="_blank">
+        <img src="/images/cf.webp" alt="Cloudflare logo" class="footer-logo">
+        <span>Cloudflare</span>
     </a>
-    <nav class="header-nav">
-      <a href="calculatorstartpage.html" class="calculators-back-button">Back</a>
-    </nav>
-  </header>
-  <main>
-    <section class="welcome">
-      <h2 class="mainbodyheader">Percent Difference Calculator</h2>
-    </section>
-    <section class="description">
-      <p class="mainbodyheader2">The percent difference calculator is used to compare two numbers and express the difference between them as a percentage of the average of those two numbers.</p>
-    </section>
-    <section class="calculator-section">
-      <div class="pdif-calculator">
-        <div class="input-group">
-          <label for="value1">Value 1:</label>
-          <input type="number" id="value1" placeholder="Enter first value" step="any" required>
-        </div>
-        <div class="input-group">
-          <label for="value2">Value 2:</label>
-          <input type="number" id="value2" placeholder="Enter second value" step="any" required>
-        </div>
-        <button onclick="calculatePercentDifference()">Calculate</button>
-        <div class="pdif-result" id="result"></div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <a href="contact.html" class="footer-contact">Contact Us</a>
-    <p class="footer-copyright">© 2025 Mantis HQ. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+    <p class="footer-copyright">© 2026 Mantis HQ. All rights reserved.</p>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>

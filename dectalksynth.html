@@ -4,7 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mantisrealm | Synthpage</title>
-  <link rel="stylesheet" href="styles.css">
+<style>
+    * { 
+      margin: 0; padding: 0; box-sizing: border-box; 
+    }
+    
+    body {
+      background: transparent;
+      color: #e0e0e0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    #dectalkUI {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    textarea {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(0, 209, 255, 0.3);
+      border-left: 3px solid #00d0ff;
+      color: #00d1ff;
+      padding: 15px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      border-radius: 4px;
+      resize: none;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #00d1ff;
+      background: rgba(0, 209, 255, 0.05);
+      box-shadow: 0px 0px 15px rgba(0, 209, 255, 0.1);
+    }
+
+    .controls-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .synthbutton {
+      flex: 0 0 auto;
+      padding: 12px 25px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: white;
+      background: #0192b3;
+      border-radius: 5px;
+      border: none;
+      border-left: 4px solid #00a8ff;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: -5px 0px 15px rgba(0, 168, 255, 0.2);
+    }
+
+    .synthbutton:hover {
+      background: white;
+      color: black;
+      box-shadow: 0px 0px 25px #00a8ff;
+      transform: translateY(-2px);
+    }
+
+    audio {
+      height: 40px;
+      filter: invert(1) hue-rotate(180deg) brightness(1.5);
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    audio:hover { 
+      opacity: 1; 
+    }
+
+    .status-text {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .hidden { 
+      display: none !important;
+    }
+  </style>
 </head>
 <body id="dectalk">
   <div id="dectalkUI" class="hidden">
@@ -26,7 +123,6 @@
     const audioPlayer = document.getElementById('audioPlayer');
 
     window.synth_tts = async function () {
-      // Automatically add phoneme on
       const textToSynthesize = "[:phoneme on]" + textInput.value;
 
       Module.ccall('TTSreset', 'void', [], []);
@@ -39,7 +135,6 @@
     };
 
     function callback(ptr, length, last_phoneme, frame_index) {
-      // phoneme timing logic removed
     }
 
     Module.onRuntimeInitialized = function () {

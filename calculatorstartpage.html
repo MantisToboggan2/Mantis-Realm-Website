@@ -3,51 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mantis HQ | Calcs/Converts</title>
+  <title>Mantis HQ | Calculators</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="logo.webp">
 </head>
 <body id="calculators">
-<header>
-  <div class="header-container">
-    <a href="index.html">
-      <img src="logo.webp" alt="Website Logo" class="header-logo">
-    </a>
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+<header id="main-header"> 
+    <div class="header-container">
+        <a href="index.html">
+            <img src="/images/logo.webp" alt="Mantis HQ Logo" class="header-logo">
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+        <a href="websites.html" target="_blank" class="websites-btn">
+            <span class="websites-text">Web Design</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="youtube.html">YouTube</a></li>
-          <li><a href="minecraft.html">Minecraft</a></li>
-          <li><a href="discord.html">Discord</a></li>
-          <li><a href="calculatorstartpage.html">Calcs/Converts</a></li>
-          <li><a href="dectalk.html">DECTalk</a></li>
-          <li><a href="dectalksongs.html">DECTalk Songs</a></li>
-      </ul>
-    </nav>
-  </div>
 </header>
-  <main>
-    <section class="welcome">
-      <h2 class="mainbodyheader">Choose a calculator or converter from the list below</h2>
+<main class="container home-page">
+    <section class="mainbox">
+        <div class="mainbox-content">
+            <h1 class="mainbox-title" data-text="CALCULATORS">CALCULATORS</h1>
+            <p class="mainbox-paragraph">Choose a calculator or converter from the list below</p>
+            <div class="website-status-terminal">
+                <div class="mainbox-actions" style="flex-wrap: wrap; margin-top: 20px;">
+                    <a href="calculator.html" class="cyber-btn btn-blue">Scientific Calculator</a>
+                    <a href="display-bandwidth.html" class="cyber-btn btn-blue">Display Bandwidth</a>
+                    <a href="percent-change.html" class="cyber-btn btn-blue">Percent Change</a>
+                    <a href="percent-difference.html" class="cyber-btn btn-blue">Percent Difference</a>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="grid-section">
-      <div class="grid-container">
-        <a href="calculator.html" class="grid-box">Scientific Calculator</a>
-        <a href="display-bandwidth.html" class="grid-box">Display Bandwidth Calculator</a>
-        <a href="percent-change.html" class="grid-box">Percent Change Calculator</a>
-        <a href="percent-difference.html" class="grid-box">Percent Difference Calculator</a>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <a href="contact.html" class="footer-contact">Contact Us</a>
-    <p class="footer-copyright">© 2025 Mantis HQ. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+</main>
+<footer>
+    <a href="https://cloudflare.com/" class="footer-contact" target="_blank">
+        <img src="/images/cf.webp" alt="Cloudflare logo" class="footer-logo">
+        <span>Cloudflare</span>
+    </a>
+    <p class="footer-copyright">© 2026 Mantis HQ. All rights reserved.</p>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>

@@ -5,57 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mantis HQ | Scientific Calculator</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="logo.webp">
+  <link rel="icon" href="/images/logo.webp">
 </head>
 <body id="standard-calculator">
-  <header>
-    <a href="index.html" class="site-title">
-      <img src="logo.webp" alt="Website Logo" class="header-logo">
-    </a>
-    <nav class="header-nav">
-      <a href="calculatorstartpage.html" class="calculators-back-button">Back</a>
-    </nav>
-  </header>
-  <main>
-    <section class="welcome">
-      <h2 class="mainbodyheader">Scientific Calculator</h2>
-    </section>
-    <section class="standard-calculator-section">
-      <div class="standard-calc-calculator">
-        <input type="text" id="standard-calc-display" readonly>
-        <div class="standard-calculator-buttons">
-          <button onclick="clearDisplay()">C</button>
-          <button onclick="appendToDisplay('(')">(</button>
-          <button onclick="appendToDisplay(')')">)</button>
-          <button onclick="appendToDisplay('÷')">÷</button>
-          <button onclick="appendToDisplay('7')">7</button>
-          <button onclick="appendToDisplay('8')">8</button>
-          <button onclick="appendToDisplay('9')">9</button>
-          <button onclick="appendToDisplay('×')">×</button>
-          <button onclick="appendToDisplay('4')">4</button>
-          <button onclick="appendToDisplay('5')">5</button>
-          <button onclick="appendToDisplay('6')">6</button>
-          <button onclick="appendToDisplay('-')">-</button>
-          <button onclick="appendToDisplay('1')">1</button>
-          <button onclick="appendToDisplay('2')">2</button>
-          <button onclick="appendToDisplay('3')">3</button>
-          <button onclick="appendToDisplay('+')">+</button>
-          <button onclick="appendToDisplay('0')">0</button>
-          <button onclick="appendToDisplay('.')">.</button>
-          <button onclick="calculate()">=</button>
-          <button onclick="appendToDisplay('sqrt(')">√</button>
-          <button onclick="appendToDisplay('pow(')">x^y</button>
-          <button onclick="appendToDisplay('sin(')">sin</button>
-          <button onclick="appendToDisplay('cos(')">cos</button>
-          <button onclick="appendToDisplay('tan(')">tan</button>
+<header id="main-header"> 
+    <div class="header-container">
+        <a href="index.html">
+            <img src="/images/logo.webp" alt="Mantis HQ Logo" class="header-logo">
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+        <a href="websites.html" target="_blank" class="websites-btn">
+            <span class="websites-text">Web Design</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="container home-page">
+    <section class="mainbox">
+        <div class="mainbox-content">
+            <h1 class="mainbox-title" data-text="SCIENTIFIC CALCULATOR">SCIENTIFIC CALCULATOR</h1>
+            <div class="website-status-terminal">
+                <div class="standard-calc-calculator">
+                    <div class="input-group">
+                        <label>OUTPUT</label>
+                        <input type="text" id="standard-calc-display" readonly 
+                               style="text-align: right; font-family: 'Orbitron', sans-serif; font-size: 24px;">
+                    </div>
+                    <div class="group-label">INPUT</div>
+                    <div class="standard-calculator-buttons">
+                        <button class="cyber-btn" onclick="clearDisplay()">C</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('(')">(</button>
+                        <button class="cyber-btn" onclick="appendToDisplay(')')">)</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('/')">÷</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('7')">7</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('8')">8</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('9')">9</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('*')">×</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('4')">4</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('5')">5</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('6')">6</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('-')">-</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('1')">1</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('2')">2</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('3')">3</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('+')">+</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('0')">0</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('.')">.</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('Math.sqrt(')">√</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('Math.pow(')">x^y</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('Math.sin(')">sin</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('Math.cos(')">cos</button>
+                        <button class="cyber-btn" onclick="appendToDisplay('Math.tan(')">tan</button>
+                        <button class="cyber-btn" onclick="calculate()" style="background: #00ff88; color: #000;">=</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
-  <footer>
-    <a href="contact.html" class="footer-contact">Contact Us</a>
-    <p class="footer-copyright">© 2025 Mantis HQ. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+</main>
+<footer>
+    <a href="https://cloudflare.com/" class="footer-contact" target="_blank">
+        <img src="/images/cf.webp" alt="Cloudflare logo" class="footer-logo">
+        <span>Cloudflare</span>
+    </a>
+    <p class="footer-copyright">© 2026 Mantis HQ. All rights reserved.</p>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>

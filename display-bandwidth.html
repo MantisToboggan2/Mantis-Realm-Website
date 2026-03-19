@@ -5,72 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mantis HQ | Display Bandwidth</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="logo.webp">
+  <link rel="icon" href="/images/logo.webp">
 </head>
 <body id="display-bandwidth">
-  <header>
-    <a href="index.html" class="site-title">
-      <img src="logo.webp" alt="Website Logo" class="header-logo">
+<header id="main-header"> 
+    <div class="header-container">
+        <a href="index.html">
+            <img src="/images/logo.webp" alt="Mantis HQ Logo" class="header-logo">
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+        <a href="websites.html" class="websites-btn">
+            <span class="websites-text">Web Design</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  <main class="container home-page">
+    <section class="mainbox">
+        <div class="mainbox-content">
+            <h1 class="mainbox-title" data-text="Display Bandwidth">Display Bandwidth</h1>
+            
+            <div class="website-status-terminal">
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h4>HDMI</h4>
+                        <ul class="rule-list">
+                            <li>1.4: 10.2 Gbps</li>
+                            <li>2.0: 18 Gbps</li>
+                            <li>2.1: 48 Gbps</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h4>DisplayPort</h4>
+                        <ul class="rule-list">
+                            <li>1.4: 32.4 Gbps</li>
+                            <li>2.1: 80 Gbps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="website-status-terminal" style="margin-top: 30px;">
+                <div class="contact-form">
+                    <div class="input-row" style="display: flex; gap: 20px; margin-bottom: 20px;">
+                        <div class="input-group" style="flex: 1;">
+                            <label for="width">RESOLUTION WIDTH</label>
+                            <input type="number" id="width" placeholder="3840">
+                        </div>
+                        <div class="input-group" style="flex: 1;">
+                            <label for="height">RESOLUTION HEIGHT</label>
+                            <input type="number" id="height" placeholder="2160">
+                        </div>
+                    </div>
+                    <div class="input-row" style="display: flex; gap: 20px; margin-bottom: 20px;">
+                        <div class="input-group" style="flex: 1;">
+                            <label for="refreshRate">REFRESH RATE (Hz)</label>
+                            <input type="number" id="refreshRate" placeholder="144">
+                        </div>
+                        <div class="input-group" style="flex: 1;">
+                            <label for="colorDepth">BIT DEPTH (bpc)</label>
+                            <input type="number" id="colorDepth" placeholder="10">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="hdr">DYNAMIC RANGE (HDR)</label>
+                        <select id="hdr" style="width: 100%; padding: 15px; background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(0, 209, 255, 0.2); color: white; border-radius: 4px;">
+                            <option value="1">SDR (No Overhead)</option>
+                            <option value="1.2">HDR (Metadata Overhead)</option>
+                        </select>
+                    </div>
+                    <div id="result" style="margin-top: 30px; font-family: 'Orbitron', sans-serif; text-align: center;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <a href="https://cloudflare.com/" class="footer-contact" target="_blank">
+        <img src="/images/cf.webp" alt="Cloudflare logo" class="footer-logo">
+        <span>Cloudflare</span>
     </a>
-    <nav class="header-nav">
-      <a href="calculatorstartpage.html" class="calculators-back-button">Back</a>
-    </nav>
-  </header>
-  <main>
-    <section class="welcome">
-      <h2 class="mainbodyheader">Display Bandwidth Calculator</h2>
-    </section>
-    <section class="standards-info">
-      <h3 class="mainbodyheader2">Below are cable standards to reference for bandwidth limitations</h3>
-      <div class="box-container">
-        <article class="mainbodybox1">
-          <h4>HDMI</h4>
-          <p>1.4: 10.2 Gbps<br>2.0: 18 Gbps<br>2.1: 48 Gbps</p>
-        </article>
-        <article class="mainbodybox2">
-          <h4>DisplayPort</h4>
-          <p>1.4: 32.4 Gbps<br>2.1: 80 Gbps</p>
-        </article>
-      </div>
-    </section>
-    <section class="calculator-section">
-      <div class="calculator">
-        <div class="input-row">
-          <div class="input-group">
-            <label for="width">Resolution Width:</label>
-            <input type="number" id="width" placeholder="e.g., 3840" required>
-          </div>
-          <div class="input-group">
-            <label for="height">Resolution Height:</label>
-            <input type="number" id="height" placeholder="e.g., 2160" required>
-          </div>
-        </div>
-        <div class="input-row">
-          <div class="input-group">
-            <label for="refreshRate">Refresh Rate:</label>
-            <input type="number" id="refreshRate" placeholder="e.g., 144" required>
-          </div>
-          <div class="input-group">
-            <label for="colorDepth">Bit Depth:</label>
-            <input type="number" id="colorDepth" placeholder="e.g., 10" required>
-          </div>
-        </div>
-        <div class="hdr-container">
-          <label for="hdr">HDR:</label>
-          <select id="hdr">
-            <option value="no">Off</option>
-            <option value="yes">On</option>
-          </select>
-        </div>
-        <button onclick="calculateBandwidth()">Calculate</button>
-        <div id="result"></div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <a href="contact.html" class="footer-contact">Contact Us</a>
-    <p class="footer-copyright">© 2025 Mantis HQ. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+    <p class="footer-copyright">© 2026 Mantis HQ. All rights reserved.</p>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>

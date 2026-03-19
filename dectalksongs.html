@@ -8,52 +8,71 @@
   <link rel="icon" href="logo.webp">
 </head>
 <body id="dectalksongs">
-<header>
-  <div class="header-container">
-    <a href="index.html">
-      <img src="logo.webp" alt="Website Logo" class="header-logo">
-    </a>
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+<header id="main-header"> 
+    <div class="header-container">
+        <a href="index.html">
+            <img src="/images/logo.webp" alt="Mantis HQ Logo" class="header-logo">
+        </a>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
+        <a href="websites.html" class="websites-btn">
+            <span class="websites-text">Web Design</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calculatorstartpage.html">Calcs</a></li>
+                <li><a href="youtube.html">Youtube</a></li>
+                <li><a href="dectalk.html">DECtalk</a></li>
+            </ul>
+        </nav>
     </div>
-    <nav class="mobile-nav" id="mobile-nav">
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="youtube.html">YouTube</a></li>
-          <li><a href="minecraft.html">Minecraft</a></li>
-          <li><a href="discord.html">Discord</a></li>
-          <li><a href="calculatorstartpage.html">Calcs/Converts</a></li>
-          <li><a href="dectalk.html">DECTalk</a></li>
-          <li><a href="dectalksongs.html">DECTalk Songs</a></li>
-      </ul>
-    </nav>
-  </div>
 </header>
-  <main>
-    <section class="welcome">
-      <h2 class="mainbodyheader">Here is a list of all the DECtalk songs I have created!</h2>
+<main class="container home-page">
+    <section class="mainbox">
+        <div class="mainbox-content">
+            <h1 class="mainbox-title" data-text="SONG DATABASE">SONG DATABASE</h1>
+            <div class="website-status-terminal">
+                <div class="group-label">RESOURCES</div>
+                <div class="mainbox-actions" style="margin-top: 10px; margin-bottom: 40px;">
+                    <a href="https://scruss.com/blog/2023/05/30/a-terrible-guide-to-singing-with-dectalk/" target="_blank" class="cyber-btn btn-blue" style="font-size: 11px; padding: 10px 20px;">Creation Guide</a>
+                    <a href="dectalk.html" class="cyber-btn btn-blue" style="font-size: 11px; padding: 10px 20px;">Back to Synth</a>
+                </div>
+                <div class="group-label">SONG LIST</div>
+                <div class="cards-container">
+                    <div class="member-card dev">
+                        <span class="rank">CLASSIC / MUSICAL</span>
+                        <h3 class="name">Daisy Bell</h3>
+                        <p class="small-note" style="margin: 10px 0; color: rgba(255,255,255,0.7); font-family: 'Courier New', monospace;">
+                            [dey<1000,20>ziy<1000,17>dey<1000,13>ziy<1000,8>...]
+                        </p>
+                        <button class="cyber-btn btn-blue copy-song" data-phonemes="[dey<1000,20>ziy<1000,17>dey<1000,13>ziy<1000,8>gih<300,10>vmiy<300,12>yurr<300,13>ah<600,10>nsr<350,13>duw<2200,8>] [ay<1000,15>mhxah<1000,20>fkrey<1000,17>ziy<1000,13>ahll<450,10>fowr<450,12>thah<250,13>llah<500,15>v ah<450,17>v yu<1700,15>] [ih<300,17>twow<300,18>ntbiy<300,17>ah<300,15>stay<600,20>llih<400,17>shmae<300,15>rih<1400,13>jh] [ay<300,15>keh<550,17>ntah<300,13>fow<575,10>rdah<300,13>keh<300,10>rih<1250,8>jh] [buh<300,8>tyu<475,13>lluh<300,17>kswiy<550,15>tah<300,8>pah<475,13>nthah<325,17>siy<325,15>t] [ah<250,17>vah<250,18>bay<300,20>sih<250,17>kuh<300,13>llbih<500,15>lltfow<250,8>rtuw<1200,13>]" style="width: 100%; font-size: 10px; margin-top: 15px;">
+                            add to clipboard
+                        </button>
+                    </div>
+                    </div>
+            </div>
+        </div>
     </section>
-    <section class="songs">
-        <h3 class="mainbodyheader2">Head to <a>this site</a> for a guide on how to create your own songs!</h3>
-      <h3 class="song-updates-header">DECtalk song list</h3>
-      <ul class="song-list">
-        <!-- to add another song, just put: <li>song name <br><br></li> directly under this comment (no need for a class it automatically works it self into the correct spot)-->
-        <li class="bottomsong">Daisy Bell <br> <br>
-          [dey<1000,20>ziy<1000,17>dey<1000,13>ziy<1000,8>gih<300,10>vmiy<300,12>yurr<300,13>ah<600,10>nsr<350,13>duw<2200,8>]
-          [ay<1000,15>mhxah<1000,20>fkrey<1000,17>ziy<1000,13>ahll<450,10>fowr<450,12>thah<250,13>llah<500,15>v ah<450,17>v yu<1700,15>]
-          [ih<300,17>twow<300,18>ntbiy<300,17>ah<300,15>stay<600,20>llih<400,17>shmae<300,15>rih<1400,13>jh]
-          [ay<300,15>keh<550,17>ntah<300,13>fow<575,10>rdah<300,13>keh<300,10>rih<1250,8>jh]
-          [buh<300,8>tyu<475,13>lluh<300,17>kswiy<550,15>tah<300,8>pah<475,13>nthah<325,17>siy<325,15>t]
-          [ah<250,17>vah<250,18>bay<300,20>sih<250,17>kuh<300,13>llbih<500,15>lltfow<250,8>rtuw<1200,13>]</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <a href="contact.html" class="footer-contact">Contact Us</a>
-    <p class="footer-copyright">© 2025 Mantis HQ. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
+</main>
+<footer>
+    <a href="https://cloudflare.com/" class="footer-contact" target="_blank">
+        <img src="/images/cf.webp" alt="Cloudflare logo" class="footer-logo">
+        <span>Cloudflare</span>
+    </a>
+    <p class="footer-copyright">© 2026 Mantis HQ. All rights reserved.</p>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>
