@@ -147,13 +147,12 @@ header.scrolled .header-logo {
   right: -260px;
   width: 260px;
   height: 100vh;
-  background: rgba(5, 9, 10, 0.98);
+  background: rgba(35, 64, 72, 0.968);
   border-left: 2px solid rgb(0, 211, 255);
   padding-top: 80px;
   transition: right 0.3s ease-in-out;
   z-index: 9999;
   visibility: visible;
-  box-shadow: 0px 0px 20px rgba(0, 209, 255, 0.2);
 }
 
 .mobile-nav.active {
@@ -189,9 +188,9 @@ header.scrolled .header-logo {
 }
 
 .mobile-nav a:hover {
-  background: rgb(255, 0, 0);
+  background: rgb(0, 255, 251);
   color: rgb(0, 0, 0);
-  box-shadow: 0px 0px 15px rgb(255, 0, 0);
+  box-shadow: 0px 0px 15px rgb(0, 255, 255);
   border: 1px solid rgb(0, 0, 0);
 }
 
@@ -693,6 +692,7 @@ body {
 #standard-calc-display {
   width: 100%;
   display: block;
+  color: rgb(255, 255, 255);
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(0, 209, 255, 0.3);
   padding: 20px;
